@@ -1,0 +1,24 @@
+{
+  "name": "rat-slayer-bot",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DragonDagger/rat-slayer-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DragonDagger/rat-slayer-bot/issues"
+  },
+  "homepage": "https://github.com/DragonDagger/rat-slayer-bot#readme",
+  "dependencies": {
+    "robotjs": "^0.6.0"
+  }
+}
