@@ -2,6 +2,7 @@
 
 const { sleep } = require("./sleep");
 const { findColor } = require("./findColor");
+const { rotateCamera } = require("./rotateCamera");
 
 const ratColors = [
   "aab4b5",
@@ -37,20 +38,33 @@ const rawMeatColors = [
 ];
 
 const findRat = () => {
-  sleep(2000);
   let findingRatColor = false;
-
+  let counter = 0;
   while (findingRatColor !== true) {
+    rotateCamera();
+    counter++;
+    console.log(`Scanning for rats, ${counter} times!`);
     findingRatColor = findColor(300, 300, 1300, 400, ratColors);
+    sleep(5000);
   }
 
   return findingRatColor;
 };
 
 //find bones function needs adjusting, as some of the bone colors match the lumbridge castle wall :/
+// Also its just not very accurate because the bones don't take up much space on the screen. WIP
 const findBones = () => {
-  sleep(2000);
-  findColor(300, 300, 1300, 400, boneColors);
+  let findingBoneColor = false;
+  let counter = 0;
+  while (findingBoneColor !== true) {
+    rotateCamera();
+    counter++;
+    console.log(`Scanning for bones, ${counter} times!`);
+    findingBoneColor = findColor(300, 300, 1400, 500, boneColors);
+    sleep(5000);
+  }
+
+  return findingBoneColor;
 };
 
 const findRawMeat = () => {
@@ -58,4 +72,4 @@ const findRawMeat = () => {
   findColor(300, 300, 1300, 400, rawMeatColors);
 };
 
-module.exports = { findRat, findBones, findRawMeat };
+module.exports = { findRat };

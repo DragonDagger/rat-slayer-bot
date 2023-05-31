@@ -1,14 +1,20 @@
 const { sleep } = require("./functions/sleep");
-const { findRat, findBones, findRawMeat } = require("./functions/findAll");
+const { findRat } = require("./functions/findAll");
+const robot = require("robotjs");
 
 // Attack a rat, Pick up rat bones and rat meat.
 const attackRat = () => {
   while (true) {
     findRat();
-    sleep(11000);
-    // findBones();
-    // sleep(11000);
-    // findRawMeat();
+    sleep(12000);
+    var img = robot.screen.capture(0, 0, 1920, 1080);
+    var color = img.colorAt(1739, 86);
+    // checks if heart icon health is low
+    if (color === "131313") {
+      robot.moveMouseSmooth(1820, 766, 0.5);
+      sleep(500);
+      robot.mouseClick();
+    }
   }
 };
 
