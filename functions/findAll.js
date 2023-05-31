@@ -1,5 +1,5 @@
 // this file will contain all the find functions, that rely on the findColor function, into one place.
-const robot = require("robotjs");
+
 const { sleep } = require("./sleep");
 const { findColor } = require("./findColor");
 
@@ -16,15 +16,38 @@ const ratColors = [
   "798586",
 ];
 
-const boneColors = ["", ""];
+const boneColors = [
+  "d1cbcb",
+  "d3cece",
+  "c0b8b7",
+  "c6bebe",
+  "aea3a3",
+  "8d1409",
+  "d2cccc",
+  "e9e7e7",
+];
 
-const rawMeatColors = ["", ""];
+const rawMeatColors = [
+  "8d1409",
+  "b0a5a5",
+  "f9f9f9",
+  "b0a5a5",
+  "d1cbcb",
+  "e2dfdf",
+];
 
 const findRat = () => {
   sleep(2000);
-  findColor(300, 300, 1300, 400, ratColors);
+  let findingRatColor = false;
+
+  while (findingRatColor !== true) {
+    findingRatColor = findColor(300, 300, 1300, 400, ratColors);
+  }
+
+  return findingRatColor;
 };
 
+//find bones function needs adjusting, as some of the bone colors match the lumbridge castle wall :/
 const findBones = () => {
   sleep(2000);
   findColor(300, 300, 1300, 400, boneColors);
@@ -35,4 +58,4 @@ const findRawMeat = () => {
   findColor(300, 300, 1300, 400, rawMeatColors);
 };
 
-module.exports = { findRat };
+module.exports = { findRat, findBones, findRawMeat };

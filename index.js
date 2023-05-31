@@ -1,12 +1,14 @@
-const robot = require("robotjs");
 const { sleep } = require("./functions/sleep");
-const { findRat } = require("./functions/findAll");
+const { findRat, findBones, findRawMeat } = require("./functions/findAll");
 
 // Attack a rat, Pick up rat bones and rat meat.
 const attackRat = () => {
   while (true) {
     findRat();
-    sleep(10000);
+    sleep(11000);
+    // findBones();
+    // sleep(11000);
+    // findRawMeat();
   }
 };
 
