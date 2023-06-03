@@ -45,7 +45,7 @@ const findRat = () => {
     counter++;
     console.log(`Scanning for rats, ${counter} times!`);
     findingRatColor = findColor(300, 300, 1300, 400, ratColors);
-    sleep(5000);
+    sleep(2000);
   }
 
   return findingRatColor;
