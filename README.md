@@ -17,12 +17,18 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 - Attacks a rat
 - Incorporates eating food to self-sustain
 
+<details>
+
+  <summary>Starting Location</summary>
+
+<img src="./rat-bot.png" alt="alt text" width="800"/>
+
+</details>
+
 ## Future plans, a seperate function for each step:
 
-- Attack a rat
 - Pick up rat bones and rat meat
 - Bury the rat bones
 - Find a tree to cut for a log, light the log
 - Cook the rat meat
 - Drop any burnt meat
-- Incorporate eating food to self-sustain ( for training with 1 Defence. )
