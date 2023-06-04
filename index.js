@@ -30,7 +30,7 @@ const attackRat = () => {
   while (true) {
     // find a rat and attack it
     findRat();
-    sleep(12000);
+    sleep(10000);
     // checks if heart icon health is low
     var img = robot.screen.capture(0, 0, 1920, 1080);
     var color = img.colorAt(1739, 86);
